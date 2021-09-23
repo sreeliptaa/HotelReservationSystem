@@ -1,5 +1,8 @@
 package com.bridgelabz;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Purpose - To build a Hotel Reservation System
  * Author - Sreelipta
@@ -7,19 +10,17 @@ package com.bridgelabz;
  */
 
 public class HotelReservation {
-    public static void main(String[] args) {
-        System.out.println("Welcome to Hotel Reservation System");
+    private List<Hotel> hotels;
+
+    public HotelReservation() {
+        this.hotels = new ArrayList<>();
     }
 
     /**
-     * Method to add Hotel in a Hotel Reservation System with Name and rates for Regular Customer
-     *
-     * @param hotelName   - hotel name is first argument
-     * @param weekdayRate - weekday rate of hotel is second argument
-     * @return the hotel details as hotel name , weekday rate
+     * This method is used to add hotel to the Hotel List
      */
-
-    public Hotel addHotel(String hotelName, int weekdayRate) {
-        return new Hotel(hotelName, weekdayRate);
+    public boolean addHotel(Hotel hotel) {
+        return this.hotels.add(hotel);
     }
 }
+
